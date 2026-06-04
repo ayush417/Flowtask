@@ -1,10 +1,9 @@
 import axios from 'axios'
 
 const API = axios.create({
-  baseURL: 'https://your-render-url.onrender.com/api'
+  baseURL: 'https://flowtask-backend-ltxu.onrender.com/api'
 })
 
-// Automatically add token to every request
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem('token')
   if (token) {

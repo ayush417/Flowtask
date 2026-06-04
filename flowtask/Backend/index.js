@@ -8,7 +8,10 @@ const taskRoutes = require('./src/routes/taskroutes')
 const app = express()
 
 // Fix CORS
-app.use(cors())
+app.use(cors({
+  origin: ['https://flowtask-xi-henna.vercel.app', 'http://localhost:3000'],
+  credentials: true
+}))
 
 app.use(express.json())
 

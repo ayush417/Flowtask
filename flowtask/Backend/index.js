@@ -9,7 +9,7 @@ const app = express()
 
 // Fix CORS
 app.use(cors({
-  origin: 'https://flowtaskproject.vercel.app',
+  origin: 'https://flowtask-xi-henna.vercel.app',
   credentials: true
 }))
 

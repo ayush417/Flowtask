@@ -2,8 +2,8 @@ const express = require('express')
 const cors = require('cors')
 require('dotenv').config()
 const pool = require('./src/db')
-const authRoutes = require('./src/routes/authRoutes')
-const taskRoutes = require('./src/routes/taskRoutes')
+const authRoutes = require('./src/routes/authroutes')
+const taskRoutes = require('./src/routes/taskroutes')
 
 const app = express()
 

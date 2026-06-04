@@ -7,7 +7,12 @@ const taskRoutes = require('./src/routes/taskroutes')
 
 const app = express()
 
-app.use(cors())
+// Fix CORS
+app.use(cors({
+  origin: 'https://flowtaskproject.vercel.app',
+  credentials: true
+}))
+
 app.use(express.json())
 
 pool.query('SELECT NOW()', (err, res) => {
@@ -18,7 +23,6 @@ pool.query('SELECT NOW()', (err, res) => {
   }
 })
 
-// Routes
 app.use('/api/auth', authRoutes)
 app.use('/api/tasks', taskRoutes)
 
